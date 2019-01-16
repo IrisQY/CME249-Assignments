@@ -1,44 +1,72 @@
 import numpy as np
-from scipy.linalg import eig
 import pandas as pd
-from typing import TypeVar, Mapping, Set, Generic, Sequence
+import scipy
+from typing import TypeVar,Mapping, Set, Generic, Sequence
 
-# Define MP by state set and transition matrix
-# State set for MP: map (label to index)
-# Transition matrix: matrix (nparray)
+# Helper functions
+T = TypeVar("T",str,int,float)
+
+# Identity helper function for str, int and float
+def ind(x: T, y: T):
+    if x == y or np.abs(x-y)<1e-5:
+        return True
+    else:
+        return False
+
+# Get state helper function
+def get_states_helper(in_graph: dict) -> dict:
+    state_list = list(in_graph.keys())
+    ind = range(len(state_list))
+    state = dict(zip(state_list,ind))
+    return state
+
+# Get transition matrix helper function
+def get_transition_helper(in_graph: dict) -> np.ndarray:
+    state = get_states_helper(in_graph)
+    tran_mat = np.zeros((len(state),len(state)))
+    for i, row in in_graph.items():
+        for j, prob in row.items():
+            ind_row = state[i]
+            ind_col = state[j]
+            if ind(tran_mat[ind_row,ind_col],0):
+                tran_mat[ind_row,ind_col] = prob
+    return tran_mat
+
+# Define MP by Graph
 """
     E.g.,
-    state = {Rain: 0, Sunny: 1, Cloudy: 1, Windy: 1}
-    tran_mat = np.asarray([0.1,0.2,0.3,0.4,
-            0.25,0.25,0.25,0.25,
-            0.1,0.2,0.3,0.4,
-            0.25,0.25,0.25,0.25]).reshape((4,4))
-    # Today's weather => tmr's weather
+    Input = {'Sunny': {'Sunny': 0.1, 'Cloudy': 0.2, 'Rainy': 0.3, 'Cloudy': 0.4},
+             'Cloudy': {'Sunny': 0.25, 'Cloudy': 0.25, 'Rainy': 0.3, 'Cloudy': 0.2},
+             'Rainy': {'Sunny': 0.1, 'Cloudy': 0.2, 'Rainy': 0.3, 'Cloudy': 0.4},
+             'Windy': {'Sunny': 0.25, 'Cloudy': 0.25, 'Rainy': 0.25, 'Cloudy': 0.25}}
+    Meaning: Today's weather => tmr's weather
 """
 class MP:
-
     # Initiate state dict & transition matrix
-    def __init__(self, state: dict, tran_mat: np.array) -> None:
+    def __init__(self, in_graph: dict) -> None:
+        self.graph = in_graph
+        state = get_states_helper(in_graph)
+        tran_mat = get_transition_helper(in_graph)
         # Check transition matrix and match state set with transition probs
-        if np.sum(tran_mat, axis = 1) != np.ones(tran_mat.shape[0]):
+        if np.linalg.norm(np.sum(tran_mat, axis = 1)- np.ones(tran_mat.shape[0]))>1e-5:
             raise ValueError
         elif len(state) != tran_mat.shape[0]:
             raise ValueError
         else:
-            self.state = state
-            self.tran_mat = tran_mat
+            self.state: dict = state
+            self.tran_mat: np.ndarray = tran_mat
 
     # Get all states
     def get_states(self) -> set:
-        return self.state.keys()
+        return self.state
+
+    # Get the transition matirx
+    def get_tran_mat(self) -> np.ndarray:
+        return self.tran_mat
 
     # Compute stationary distribution using eigenvalue decomposition
     def stationary_dist(self) -> np.array:
-        e_value, e_vec = eig(self.tran_mat,left=True,right=False)
-        for num in e_value:
-            if np.abs(num - 1.) < 1e-5:
-                out = np.array(e_vec[:, num])
+        e_value, e_vec = np.linalg.eig(self.tran_mat.T)
+        out = np.array(e_vec[:, np.where(np.abs(e_value- 1.) < 1e-5)[0][0]])
         out = out/np.sum(out)
         return out
-
-
