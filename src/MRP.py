@@ -2,21 +2,7 @@ import numpy as np
 import pandas as pd
 from typing import TypeVar, Mapping, Set, Generic, Sequence
 import MP
-
-# Convert reward helper function
-def convert_reward(_2nd_def_reward: dict, tran_mat: np.ndarray, state: dict) -> dict:
-    reward_mat = np.zeros((len(state),len(state)))
-    # Create reward matrix
-    for i, row in _2nd_def_reward.items():
-        for j, reward in row.items():
-            ind_row = state[i]
-            ind_col = state[j]
-            if MP.ind(reward[ind_row,ind_col],0):
-                reward[ind_row,ind_col] = reward
-    # Cast to 1st def reward vector
-    reward_vec = np.diag(tran_mat.dot(reward_mat.T))
-    reward_dict = dict(zip(state.keys(),reward_vec))
-    return reward_dict
+from MRP_Helper import convert_reward
 
 # Define MRP by Graph
 """
@@ -32,15 +18,27 @@ def convert_reward(_2nd_def_reward: dict, tran_mat: np.ndarray, state: dict) -> 
 class MRP(MP):
 
     # Initiate state with reward and discount
-    def __init__(self, state_reward: dict, gamma: float) -> None:
+    def __init__(self, in_graph: dict, state_reward: dict, gamma: float) -> None:
+        super().__init__(in_graph)
+        self.state = self.get_states()
+        self.tran_mat = self.get_tran_mat()
         if gamma <0 or gamma >1:
             raise ValueError
         else:
             reward_vec = np.zeros(len(self.state))
             for key, ind in self.state.items():
                 reward_vec[ind] = state_reward[key]
+
             self.reward: np.ndarray = reward_vec
             self.gamma: float = gamma
+
+    # Get all states
+    def get_states(self) -> set:
+        return self.state
+
+    # Get the transition matirx
+    def get_tran_mat(self) -> np.ndarray:
+        return self.tran_mat
 
     # Compute value function R(s)
     def value_func(self) -> float:
