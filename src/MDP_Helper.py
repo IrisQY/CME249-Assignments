@@ -32,7 +32,7 @@ def get_actions_helper(in_graph: dict) -> dict:
     return actions
 
 # Get transition matrix helper function
-def get_transition_helper(in_graph: dict) -> np.ndarray:
+def get_transition_helper_mdp(in_graph: dict) -> np.ndarray:
     states = get_states_helper(in_graph)
     actions = get_actions_helper(in_graph)
     tran_mat = np.zeros((len(states),len(actions),len(states))) # States * actions * states
