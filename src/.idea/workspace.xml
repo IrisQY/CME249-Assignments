@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42ab1339-8391-4a9b-b185-4eee06435452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/DynamicProgramming-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/DynamicProgramming-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DynamicProgramming.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../DynamicProgramming.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MP_MRP_MDP.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../MP_MRP_MDP.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MDP.py" beforeDir="false" afterPath="$PROJECT_DIR$/MDP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDP_Helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/MDP_Helper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +38,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1025" />
+          <entry key="py" value="1028" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1025" />
+          <entry key="Python" value="1028" />
         </counts>
       </usages-collector>
     </session>
@@ -52,8 +53,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MDP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="87" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+            <state relative-caret-position="135">
+              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -217,8 +221,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MDP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="87" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+        <state relative-caret-position="135">
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

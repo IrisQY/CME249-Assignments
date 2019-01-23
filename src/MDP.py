@@ -60,6 +60,10 @@ class MDP():
     def get_policy(self) -> np.ndarray:
         return self.policy
 
+    # Get gamma
+    def get_gamma(self) -> float:
+        return self.gamma
+    
     # Generate MRP
     def generate_MRP(self, policy: dict):
         print(self.reward)
