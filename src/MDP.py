@@ -63,7 +63,7 @@ class MDP():
     # Get gamma
     def get_gamma(self) -> float:
         return self.gamma
-    
+
     # Generate MRP
     def generate_MRP(self, policy: dict):
         print(self.reward)
@@ -90,11 +90,11 @@ class MDP():
         return np.linalg.inv(np.identity(len(MRP_tmp.state))-MRP_tmp.gamma*MRP_tmp.tran_mat).dot(MRP_tmp.reward)
 
     # Compute action value function q_{\pi}(s,a)
-    def action_value_func(self) -> float:
+    def action_value_func(self, policy) -> float:
         out = np.zeros((len(self.state),len(self.action)))
         for s_cur,i in self.state.items():
             for a,j in self.action.items():
                 out[i,j] += self.reward[i,j]
                 for s_next,c in self.state.items():
-                    out[i,j] += self.gamma*self.tran_mat[i,j,c]*self.state_value_func(self.policy)[c]
+                    out[i,j] += self.gamma*self.tran_mat[i,j,c]*self.state_value_func(policy)[c]
         return out
