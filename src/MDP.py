@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 from typing import TypeVar, Mapping, Set, Generic, Sequence
-import MRP
-from MDP_Helper import get_states_helper, get_actions_helper, get_transition_helper_mdp, get_reward_helper,get_policy_helper
+from src.MRP import MRP
+from src.MDP_Helper import get_states_helper, get_actions_helper, get_transition_helper_mdp, get_reward_helper,get_policy_helper
 # Define MDP by Graph
 """
     E.g., 

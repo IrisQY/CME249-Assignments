@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import scipy
 from typing import TypeVar,Mapping, Set, Generic, Sequence
-from MP_Helper import T, ind, get_states_helper, get_transition_helper
+from src.MP_Helper import T, ind, get_states_helper, get_transition_helper
 
 # Define MP by Graph
 """

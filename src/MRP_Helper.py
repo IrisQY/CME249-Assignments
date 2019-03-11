@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import scipy
 from typing import TypeVar,Mapping, Set, Generic, Sequence
-from MP_Helper import ind
+from src.MP_Helper import ind
 
 # Convert reward helper function
 def convert_reward(_2nd_def_reward: dict, tran_mat: np.ndarray, state: dict) -> dict:

@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 from typing import TypeVar, Mapping, Set, Generic, Sequence
-import MP
-from MRP_Helper import convert_reward
+from src.MP import MP
+from src.MRP_Helper import convert_reward
 
 # Define MRP by Graph
 """
