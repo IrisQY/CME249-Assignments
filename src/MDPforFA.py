@@ -1,4 +1,5 @@
 from typing import TypeVar, Mapping, Set, Callable, Tuple, Generic
+import numpy as np
 import random
 
 S = TypeVar('S')
@@ -31,4 +32,25 @@ class MDPforFA():
         return s, r
 
     def is_terminal_state(self,s_cur):
-        return 0
+        return self.terminal_states_func(s_cur)
+
+class linearFA():
+    def __init__(self, lr: float, features: np.ndarray):
+        self.lr = lr
+        self.features = features
+        self.n_features = self.features.shape[0]
+        self.params = np.zeros(self.n_features)
+
+    def v_func_predict(self, new_feature):
+        return self.params.dot(new_feature)
+
+    def update_params(self, new_feature, vf):
+        ### MSE = (self.v_func_predict(new_feature) - vf)**2
+        ### d_MSE = 2*(self.v_func_predict(new_feature) - vf)*new_feature
+        ### para += lr*d_MSE
+        d_MSE = 2*(self.v_func_predict(new_feature) - vf)*new_feature
+        self.params += self.lr*d_MSE
+        return self.params
+
+    def get_params(self):
+        return self.params

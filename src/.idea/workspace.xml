@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42ab1339-8391-4a9b-b185-4eee06435452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MDPforFA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/MiniProject-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/MiniProject-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MertonPortfolio .ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MiniProject.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../MiniProject.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDP.py" beforeDir="false" afterPath="$PROJECT_DIR$/MDP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MP.py" beforeDir="false" afterPath="$PROJECT_DIR$/MP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MRP.py" beforeDir="false" afterPath="$PROJECT_DIR$/MRP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MRP_Helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/MRP_Helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDPforFA.py" beforeDir="false" afterPath="$PROJECT_DIR$/MDPforFA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +18,14 @@
     <session id="871446252">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,12 +40,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1370" />
+          <entry key="py" value="1502" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1370" />
+          <entry key="Python" value="1502" />
         </counts>
       </usages-collector>
     </session>
@@ -69,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MDP_Helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="735">
+              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -81,11 +79,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MDPforFA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="514">
+              <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
               <folding>
-                <element signature="e#0#57#0" expanded="true" />
-                <marker date="1552344404022" expanded="true" signature="772:781" ph="..." />
+                <element signature="e#0#66#0" expanded="true" />
+                <marker date="1552678970137" expanded="true" signature="791:800" ph="..." />
               </folding>
             </state>
           </provider>
@@ -198,7 +196,7 @@
     <frame x="14" y="23" width="1400" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -262,16 +260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MDP_Helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MDP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -282,13 +270,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MDP_Helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MDPforFA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="514">
+          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <marker date="1552344404022" expanded="true" signature="772:781" ph="..." />
+            <element signature="e#0#66#0" expanded="true" />
+            <marker date="1552678970137" expanded="true" signature="791:800" ph="..." />
           </folding>
         </state>
       </provider>
